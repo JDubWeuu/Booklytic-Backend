@@ -22,10 +22,11 @@ const validate = async (req, res, next) => {
     }
     catch (error) {
         // within front end, catch this error and update loggedIn state and then redirect to the login page
-        res.status(500).json({
-            error: "Unable to verify user id token",
-            details: error.message
-        })
+        // res.status(500).json({
+        //     error: "Unable to verify user id token",
+        //     details: error.message
+        // })
+        res.redirect('/login');
     }
 }
 
